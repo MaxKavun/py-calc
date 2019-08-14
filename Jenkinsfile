@@ -1,5 +1,8 @@
 pipeline {
 	agent { label 'py-app' }
+	triggers {
+		pollSCM('* * * * *')
+	}
 	stages {
 		stage('Compile') {
 			steps {
