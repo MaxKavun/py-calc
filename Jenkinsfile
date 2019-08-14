@@ -1,5 +1,5 @@
 pipeline {
-	agent py-app
+	agent { label 'py-app' }
 	stages {
 		stage('Compile') {
 			sh "python3 calculator.py 2 2"
